@@ -1,0 +1,11 @@
+.app{
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.title{
+    font-Size: 50px;
+    text-align: center;
+    margin: 20px 0;
+}
