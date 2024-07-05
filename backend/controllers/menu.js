@@ -33,6 +33,10 @@ export const createMenu = async (req, res) => {
             return res.status(400).json({ message: "Vui lòng điền đầy đủ thông tin món ăn!" })
         }
 
+        if (!req.file) {
+            return res.status(400).json({ message: "Vui lòng tải lên hình ảnh của món ăn!" });
+        }
+
         let unit;
         if (classify === 'Món ăn') {
             unit = 'Phần';
@@ -76,7 +80,7 @@ export const createMenu = async (req, res) => {
             description,
             unit,
             price,
-            imageMenu: imageUrl // Save the image URL in the database
+            imageMenu: imageUrl
         });
 
         return res.status(200).json({
@@ -122,6 +126,10 @@ export const editMenu = async (req, res) => {
         const { error } = editSchema.validate({ name, classify, category, description, price, status });
         if (error) {
             return res.status(400).json({ message: error.message })
+        }
+
+        if (!req.file) {
+            return res.status(400).json({ message: "Vui lòng tải lên hình ảnh của món ăn!" });
         }
 
         let unit;

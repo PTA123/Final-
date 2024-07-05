@@ -7,8 +7,8 @@ import upload from "../middlewares/upload.js";
 const router = express.Router()
 
 // router.put("/upload-imageMenu",upload.single("image") ,uploadImageMenu)
-router.post("/create-menu", authentication, authorization ,upload.single("image") , createMenu)
-router.put("/:id", authentication, authorization, upload.single('image'), editMenu)
+router.post("/create-menu" ,upload.single("image") , createMenu)
+router.put("/:id", upload.single('image'), editMenu)
 router.delete("/:id", authentication, authorization, deleteMenu)
 router.get("/get-paging-menu", getPagingMenu)
 router.get("/:id", getMenuById)
