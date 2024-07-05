@@ -13,6 +13,10 @@ const Menu = new mongoose.Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String,
+        required: true
+    },
     description: {
         type: String,
         required: true
@@ -22,10 +26,6 @@ const Menu = new mongoose.Schema({
         required: true
     },
     price: {
-        type: Number,
-        required: true
-    },
-    discount: {
         type: Number,
         required: true
     },

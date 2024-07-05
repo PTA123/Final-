@@ -1,12 +1,19 @@
 import express from "express"
-import { createMenu, deleteMenu, editMenu, getMenuById, getPagingMenu, searchMenu } from "../controllers/menu.js"
+import { createMenu, deleteMenu, editMenu, getAll, getMenuByCategory, getMenuById, getPagingMenu, searchMenu, /*uploadImageMenu*/ } from "../controllers/menu.js"
 import authentication from './../middlewares/authentication.js';
 import authorization from './../middlewares/authorization.js';
+import upload from "../middlewares/upload.js";
+
 const router = express.Router()
-router.post("/create-menu", authentication, authorization, createMenu)
-router.put("/:id", authentication, authorization, editMenu)
+
+// router.put("/upload-imageMenu",upload.single("image") ,uploadImageMenu)
+router.post("/create-menu", authentication, authorization ,upload.single("image") , createMenu)
+router.put("/:id", authentication, authorization, upload.single('image'), editMenu)
 router.delete("/:id", authentication, authorization, deleteMenu)
-router.get("/get-paging-menu", authentication, authorization, getPagingMenu)
-router.get("/:id", authentication, authorization, getMenuById)
+router.get("/get-paging-menu", getPagingMenu)
+router.get("/:id", getMenuById)
 router.post("/search-menu", authentication, authorization, searchMenu)
+router.get('/category/:category', getMenuByCategory);
+router.get("/", getAll);
+
 export default router
