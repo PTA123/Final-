@@ -288,10 +288,9 @@ export const getMenuByCategory = async (req, res) => {
 
 export const getAll = async (req, res) => {
     try {
-        const { category } = req.query; // Lấy category từ tham số query
+        const { category } = req.query; 
         let query = {};
 
-        // Nếu category được cung cấp, thêm nó vào query
         if (category) {
             query.category = category;
         }

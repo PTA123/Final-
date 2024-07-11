@@ -14,12 +14,12 @@ const RestaurantCard = ({ restaurant }) => {
         <p className="restaurant-description">{restaurant.description}</p>
         
         <div style={{ display: 'flex' }}>
-          <IoLocation />
+          <div style={{ paddingRight:'10px' }}><IoLocation /></div>
           <p className="restaurant-address">{restaurant.location}</p>
         </div>
         
-        <div style={{ display: 'flex' }}>
-        <IoIosTimer />
+        <div style={{ display: 'flex' ,alignItems: 'center'}}>
+        <div div style={{ paddingRight:'10px' }}><IoIosTimer /></div>
         <p className="restaurant-hours">
           Open: {restaurant.hours.open} - Close: {restaurant.hours.close}
         </p>
