@@ -33,7 +33,7 @@
                 "image": "./Lunch.jpg",
                 "title": "BỮA TRƯA SẢNG KHOÁI",
                 "category": "Bữa trưa",
-                "description": "Buổi trưa ngon lành và kích thích vị giác"
+                "description": "Bữa trưa ngon lành và kích thích vị giác"
             },
             {
                 "id": 3,
@@ -46,31 +46,36 @@
                 "id": 4,
                 "image": "./Tet.jpg",
                 "title": "MÂM TẾT ẤM CÚNG",
-                "category": "Ngày tết"
+                "category": "Ngày tết",
+                "description":"Mâm cơm sum vầy cùng hoa mai sắc thắm bên người thân"
             },
             {
                 "id": 5,
                 "image": "./Noel.jpg",
                 "title": "GIÁNG SINH ÊM ĐỀM",
-                "category": "Noel"
+                "category": "Noel",
+                "description":"Mùa giáng sinh ấm áp"
             },
             {
                 "id": 6,
                 "image": "./Valentine.jpg",
                 "title": "VALENTINE LÃNG MẠN",
-                "category": "Tình nhân"
+                "category": "Tình nhân",
+                "description":"Còn gì bằng với một bữa ăn lãng mạn bên bạn đời"
             },
             {
                 "id": 7,
                 "image": "./Family.jpg",
                 "title": "TÌNH THÂN NỒNG THẮM",
-                "category": "Gia đình"
+                "category": "Gia đình",
+                "description":"Bữa cơm thân mật với gia đình những ngày cuối tuần"
             },
             {
                 "id": 8,
                 "image": "./Vip.jpg",
                 "title": "BỮA ĂN CAO CẤP",
-                "category": "Lương về"
+                "category": "Lương về",
+                "description":"Thăng hoa với bữa tiệc hoành tráng lệ cùng mọi thứ đều VIP"
             }
         ],
         "team": [
